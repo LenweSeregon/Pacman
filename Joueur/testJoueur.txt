@@ -1,0 +1,8 @@
+score = 1500
+pacgommeMange = 0
+fruitMange = 0
+nbThemePacmanJouer = 2
+nbThemeLotrJouer = 0
+vieGarde = 0
+viePerdue = 0
+fantomeMange = 0

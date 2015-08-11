@@ -1,0 +1,9 @@
+score = 2030
+pacgommeMange = 201
+fruitMange = 1
+nbThemePacmanJouer = 1
+nbThemeLotrJouer = 0
+vieGarde = 0
+viePerdue = 3
+fantomeMange = 6
+Succes 12 0 3 21 18
