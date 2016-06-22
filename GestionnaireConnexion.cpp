@@ -11,7 +11,7 @@
 
 
 GestionnaireConnexion::GestionnaireConnexion():
-_nomFichierPseudo("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Joueur/listeJoueurs.txt")
+_nomFichierPseudo("Joueur/listeJoueurs.txt")
 {
     recupererPseudo();
 }
@@ -100,7 +100,7 @@ bool GestionnaireConnexion::creerCompte(std::string pseudo)
     {
         _listePseudo.push_back(pseudo);
         ecrirePseudo();
-        std::ofstream flux("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Joueur/"+pseudo+".txt");
+        std::ofstream flux("Joueur/"+pseudo+".txt");
         std::vector<std::string> items;
         items.push_back("score = 0");
         items.push_back("pacgommeMange = 0");

@@ -47,7 +47,7 @@ bool GestionnaireMenu::quitterPartie()
 
 void GestionnaireMenu::chargerOption()
 {
-    std::ifstream flux("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/option/option.txt");
+    std::ifstream flux("option/option.txt");
     if(flux)
     {
         std::string recuperateur;

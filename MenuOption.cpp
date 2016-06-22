@@ -41,7 +41,7 @@ MenuOption::~MenuOption()
 
 void MenuOption::chargerOption()
 {
-    std::ifstream flux("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/option/option.txt");
+    std::ifstream flux("option/option.txt");
     if(flux)
     {
         std::string recuperateur;
@@ -99,7 +99,7 @@ std::string MenuOption::retournerReponse()const
 
 void MenuOption::sauvegarderOptions()
 {
-    std::ofstream flux("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/option/option.txt", std::ios::trunc);
+    std::ofstream flux("option/option.txt", std::ios::trunc);
     if(flux)
     {
         if(_modeTourni.estCoche())

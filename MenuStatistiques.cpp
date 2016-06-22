@@ -28,7 +28,7 @@ _etatScroll(Scroll::Aucun)
     //Initialisation des textes
     _titre.setPosition((_taillePlateau.x - _titre.getGlobalBounds().width)/2, 0);
     _texteRevenirMenu.setPosition(_titre.getPosition().x + _titre.getGlobalBounds().width + 120 , 300);
-    std::ifstream statsJoueur("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Joueur/"+_joueur.getPseudo()+".txt");
+    std::ifstream statsJoueur("Joueur/"+_joueur.getPseudo()+".txt");
     std::string recuperateur;
     if(statsJoueur)
     {

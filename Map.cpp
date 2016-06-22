@@ -39,7 +39,7 @@ Map::~Map()
 
 void Map::loadMapInfo()
 {
-    std::string nomFichier = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Map/level"+std::to_string(_levelMap)+".txt";
+    std::string nomFichier = "Map/level"+std::to_string(_levelMap)+".txt";
     std::ifstream fichier(nomFichier);
     
     if(fichier)

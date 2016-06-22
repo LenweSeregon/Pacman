@@ -16,7 +16,7 @@ ListeSucces::ListeSucces(sf::Vector2f taillePlateau):
 _taillePlateau(taillePlateau)
 {
     
-    std::string nomFichier = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Succes/listeSucces.txt";
+    std::string nomFichier = "Succes/listeSucces.txt";
     std::ifstream fichierSucces(nomFichier);
     
     std::string recuperateurInformation;

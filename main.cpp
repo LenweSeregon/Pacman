@@ -27,12 +27,12 @@
 int main(int, char const**)
 {
     //Une fonction aprés pour charger les éléments graphiques
-    GraphicDispatcher::ajouterNouvelleFont("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/font/Marathon.ttf");
-    GraphicDispatcher::ajouterNouvelleFont("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/font/Poseidon.ttf");
-    GraphicDispatcher::ajouterNouvelleFont("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/font/Roman.ttf");
-    GraphicDispatcher::ajouterNouvelleFont("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/font/Darleston.otf");
-    GraphicDispatcher::ajouterNouvelleFont("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/font/Stonehen.ttf");
-    GraphicDispatcher::ajouterNouvelleFont("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/font/Carolingia.ttf");
+    GraphicDispatcher::ajouterNouvelleFont("font/Marathon.ttf");
+    GraphicDispatcher::ajouterNouvelleFont("font/Poseidon.ttf");
+    GraphicDispatcher::ajouterNouvelleFont("font/Roman.ttf");
+    GraphicDispatcher::ajouterNouvelleFont("font/Darleston.otf");
+    GraphicDispatcher::ajouterNouvelleFont("font/Stonehen.ttf");
+    GraphicDispatcher::ajouterNouvelleFont("font/Carolingia.ttf");
     
     GraphicDispatcher::loadFont();
     GraphicDispatcher::loadFond();

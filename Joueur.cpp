@@ -43,7 +43,7 @@ std::string Joueur::getPseudo()const
 void Joueur::chargerInformation()
 {
     //Chargement de la liste des caractéristiques du joueur
-    std::string nomFichier = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Joueur/"+_pseudo+".txt";
+    std::string nomFichier = "Joueur/"+_pseudo+".txt";
     std::ifstream fluxJoueur(nomFichier);
     std::string ensembleSuccesValide;
     
@@ -91,7 +91,7 @@ const std::vector<int> Joueur::getIdSuccesValide()const
 
 void Joueur::sauvegarderDonnees()
 {
-    std::string nomFichier = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Joueur/"+_pseudo+".txt";
+    std::string nomFichier = "Joueur/"+_pseudo+".txt";
     std::fstream fluxJoueur(nomFichier, std::ios::out|std::ios::trunc);
     
     if(fluxJoueur)

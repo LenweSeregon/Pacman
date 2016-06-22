@@ -25,7 +25,7 @@ void GestionnaireSon::jouerMusiqueFond(std::string theme)
 {
     if(_jouerMusiqueFond)
     {
-        if(!_musiqueEnLecture.openFromFile("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Son/"+theme+"/pacmanMusiqueTheme.ogg"))
+        if(!_musiqueEnLecture.openFromFile("Son/"+theme+"/pacmanMusiqueTheme.ogg"))
         {
             throw "La musique n'a pas été trouve";
         }
@@ -42,7 +42,7 @@ void GestionnaireSon::autoriserMusiqueFond(bool accept)
 
 void GestionnaireSon::chargerSons(std::string theme)
 {
-    std::ifstream fichier("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Son/nomSons.txt");
+    std::ifstream fichier("Son/nomSons.txt");
     std::string lecture;
     while(getline(fichier, lecture))
     {
@@ -53,7 +53,7 @@ void GestionnaireSon::chargerSons(std::string theme)
     for(int i = 0; i < _chemins.size(); i++)
     {
         _buffers.push_back(sf::SoundBuffer());
-         if(!_buffers[i].loadFromFile("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Son/"+theme+"/"+_chemins[i]))
+         if(!_buffers[i].loadFromFile("Son/"+theme+"/"+_chemins[i]))
          {
          throw ("Probleme chargement son");
          }

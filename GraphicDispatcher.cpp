@@ -56,7 +56,7 @@ void GraphicDispatcher::loadTextureEtFont()
 
 void GraphicDispatcher::loadFantomeFaibleTexture()
 {
-    std::string nomFantomeWeak = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/"+_themeChoisit+"/weakFantome.png";
+    std::string nomFantomeWeak = "Texture/"+_themeChoisit+"/weakFantome.png";
     sf::Texture texture;
     if(!texture.loadFromFile(nomFantomeWeak))
         throw("Pas de fichier de ce nom pour les tile Pacman");
@@ -81,7 +81,7 @@ void GraphicDispatcher::loadFantomeFaibleTexture()
 void GraphicDispatcher::loadImageFondPacman()
 {
     std::vector<std::string> chemins;
-    std::ifstream fichier("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/nomFond.txt");
+    std::ifstream fichier("Texture/nomFond.txt");
     std::string lecture;
     while(getline(fichier, lecture))
     {
@@ -93,7 +93,7 @@ void GraphicDispatcher::loadImageFondPacman()
         std::pair<std::string, sf::Texture> tmp;
         tmp.first = chemins[i];
         sf::Texture toLoad;
-        if(!toLoad.loadFromFile("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/themePacman/fond/"+chemins[i]))
+        if(!toLoad.loadFromFile("Texture/themePacman/fond/"+chemins[i]))
             throw ("Problème de chargement de fond");
         tmp.second= sf::Texture(toLoad);
         
@@ -105,7 +105,7 @@ void GraphicDispatcher::loadImageFondPacman()
 void GraphicDispatcher::loadImageFondLotr()
 {
     std::vector<std::string> chemins;
-    std::ifstream fichier("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/nomFond.txt");
+    std::ifstream fichier("Texture/nomFond.txt");
     std::string lecture;
     while(getline(fichier, lecture))
     {
@@ -117,7 +117,7 @@ void GraphicDispatcher::loadImageFondLotr()
         std::pair<std::string, sf::Texture> tmp;
         tmp.first = chemins[i];
         sf::Texture toLoad;
-        if(!toLoad.loadFromFile("/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/themeLotr/fond/"+chemins[i]))
+        if(!toLoad.loadFromFile("Texture/themeLotr/fond/"+chemins[i]))
             throw ("Problème de chargement de fond");
         tmp.second= sf::Texture(toLoad);
         _imageFondLotr.push_back(tmp);
@@ -126,7 +126,7 @@ void GraphicDispatcher::loadImageFondLotr()
 
 void GraphicDispatcher::loadPacmanTexture()
 {
-    std::string nomPacTexture = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/"+_themeChoisit+"/pacman.png";
+    std::string nomPacTexture = "Texture/"+_themeChoisit+"/pacman.png";
     sf::Texture texture;
     if(!texture.loadFromFile(nomPacTexture))
         throw("Pas de fichier de ce nom pour les tile Pacman");
@@ -150,7 +150,7 @@ void GraphicDispatcher::loadPacmanTexture()
 
 void GraphicDispatcher::loadFantomeTexture()
 {
-    std::string nomPacTexture = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/"+_themeChoisit+"/fantome.png";
+    std::string nomPacTexture = "Texture/"+_themeChoisit+"/fantome.png";
     sf::Texture texture;
     if(!texture.loadFromFile(nomPacTexture))
         throw("Pas de fichier de ce nom pour les tile Pacman");
@@ -174,7 +174,7 @@ void GraphicDispatcher::loadFantomeTexture()
 
 void GraphicDispatcher::loadFruitTexture()
 {
-    std::string nomPacTexture = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/"+_themeChoisit+"/fruit.png";
+    std::string nomPacTexture = "Texture/"+_themeChoisit+"/fruit.png";
     sf::Texture texture;
     if(!texture.loadFromFile(nomPacTexture))
         throw("Pas de fichier de ce nom pour les tile Pacman");
@@ -197,7 +197,7 @@ void GraphicDispatcher::loadFruitTexture()
 
 void GraphicDispatcher::loadStatsTexture()
 {
-    std::string nomStatIcone = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/"+_themeChoisit+"/iconeStat.png";
+    std::string nomStatIcone = "Texture/"+_themeChoisit+"/iconeStat.png";
     sf::Texture texture;
     if(!texture.loadFromFile(nomStatIcone))
         throw("Pas de fichier de ce nom pour les tile Pacman");
@@ -220,7 +220,7 @@ void GraphicDispatcher::loadStatsTexture()
 
 void GraphicDispatcher::loadMapTexture()
 {
-    std::string nomMapTexture = "/Users/nicolasserf/Desktop/TestProjetPacman/ProjetPacman/Texture/"+_themeChoisit+"/mapTileTest3.png";
+    std::string nomMapTexture = "Texture/"+_themeChoisit+"/mapTileTest3.png";
     sf::Texture texture;
     if(!(texture.loadFromFile(nomMapTexture)))
         throw("Pas de fichier de ce nom pour les tileMap");
@@ -247,8 +247,9 @@ void GraphicDispatcher::loadFont()
     for(size_t i = 0; i < _nomFont.size(); ++i)
     {
         _fontListe.push_back(sf::Font());
-        if(!_fontListe[i].loadFromFile(_nomFont[i]))
-            throw("Erreur d'ouverture");
+        if(!_fontListe[i].loadFromFile(_nomFont[i])){
+            throw("error");
+        }
     }
 }
 
